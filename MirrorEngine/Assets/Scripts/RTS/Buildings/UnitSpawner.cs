@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using Mirror;
 
 public class UnitSpawner : NetworkBehaviour, IPointerClickHandler
 {
     #region Public Variables
-    public GameObject unitPrefab;
-    public Transform unitSpawn;
+    [SerializeField] private GameObject unitPrefab = default;
+    [SerializeField] private Transform unitSpawn = default;
     #endregion
 
     #region My Functions
@@ -18,7 +16,6 @@ public class UnitSpawner : NetworkBehaviour, IPointerClickHandler
     void CmdSpawnUnit()
     {
         GameObject unitObj = Instantiate(unitPrefab, unitSpawn.position, unitSpawn.rotation);
-
         NetworkServer.Spawn(unitObj, connectionToClient);
     }
     #endregion

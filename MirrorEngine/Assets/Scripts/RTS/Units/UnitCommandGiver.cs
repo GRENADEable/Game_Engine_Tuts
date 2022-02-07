@@ -1,14 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
-using Mirror;
 
 public class UnitCommandGiver : MonoBehaviour
 {
     #region Public Variables
-    public UnitSelectionHandler unitSelection;
-    public LayerMask mouseLayer;
+    [SerializeField] private LayerMask mouseLayer = default;
+    [SerializeField] private UnitSelectionHandler unitSelection = default;
     #endregion
 
     #region Private Variables
@@ -16,10 +13,7 @@ public class UnitCommandGiver : MonoBehaviour
     #endregion
 
     #region Unity Callbacks
-    void Start()
-    {
-        _cam = Camera.main;
-    }
+    void Start() => _cam = Camera.main;
 
     void Update()
     {
@@ -30,6 +24,18 @@ public class UnitCommandGiver : MonoBehaviour
 
         if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, mouseLayer))
             return;
+
+        //if (hit.collider.TryGetComponent<Targatable>(out Targatable target))
+        //{
+        //    if (target.hasAuthority)
+        //    {
+        //        TryMove(hit.point);
+        //        return;
+        //    }
+
+        //    TryTarget(target);
+        //    return;
+        //}
 
         TryMove(hit.point);
     }
@@ -47,6 +53,12 @@ public class UnitCommandGiver : MonoBehaviour
         foreach (Unit selectedUnit in unitSelection.SelectedUnits)
             selectedUnit.GetUnitMovement().CmdMove(point);
     }
+
+    //void TryTarget(Targatable target)
+    //{
+    //    foreach (Unit selectedUnit in unitSelection.SelectedUnits)
+    //        selectedUnit.GetTargeter().CmdSetTarget(target.gameObject);
+    //}
     #endregion
 
     #endregion

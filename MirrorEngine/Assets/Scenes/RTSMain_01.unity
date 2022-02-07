@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 22074539}
   - component: {fileID: 22074540}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: Spawn_Point_2
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 377463522}
   - component: {fileID: 377463521}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Main_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 778766595}
   - component: {fileID: 778766597}
   m_Layer: 0
-  m_Name: UnitHnadlers
+  m_Name: Unit_Handlers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -407,7 +407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 821093877}
   m_Layer: 0
-  m_Name: SpawnPoints
+  m_Name: Spawn_Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 1099577807}
   - component: {fileID: 1099577808}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: Spawn_Point_1
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 1749355003}
   - component: {fileID: 1749355002}
   m_Layer: 5
-  m_Name: SelectionBox
+  m_Name: Selection_Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -656,7 +656,7 @@ GameObject:
   - component: {fileID: 1990203661}
   - component: {fileID: 1990203665}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Main_Cam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -786,7 +786,7 @@ GameObject:
   - component: {fileID: 2032698653}
   - component: {fileID: 2032698652}
   m_Layer: 5
-  m_Name: SelectionCanvas
+  m_Name: Selection_Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -866,7 +866,7 @@ GameObject:
   - component: {fileID: 2100680596}
   - component: {fileID: 2100680595}
   m_Layer: 0
-  m_Name: Post-process Volume
+  m_Name: Post_Process
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

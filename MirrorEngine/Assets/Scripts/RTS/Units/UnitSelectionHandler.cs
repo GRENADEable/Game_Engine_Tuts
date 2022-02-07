@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Mirror;
@@ -7,8 +6,8 @@ using Mirror;
 public class UnitSelectionHandler : MonoBehaviour
 {
     #region Public Variables
-    public LayerMask mouseLayer;
-    public RectTransform unitSelectionArea;
+    [SerializeField] private LayerMask mouseLayer = default;
+    [SerializeField] private RectTransform unitSelectionArea = default;
     #endregion
 
     #region Private Variables
@@ -21,10 +20,7 @@ public class UnitSelectionHandler : MonoBehaviour
     #endregion
 
     #region Unity Callbacks
-    void Start()
-    {
-        _cam = Camera.main;
-    }
+    void Start() => _cam = Camera.main;
 
     void Update()
     {
@@ -32,17 +28,11 @@ public class UnitSelectionHandler : MonoBehaviour
             _player = NetworkClient.connection.identity.GetComponent<RTSPlayer>();
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
-        {
             StartSelectionArea();
-        }
         else if (Mouse.current.leftButton.isPressed)
-        {
             UpdateSelectionArea();
-        }
         else if (Mouse.current.leftButton.wasReleasedThisFrame)
-        {
             ClearSelectionArea();
-        }
     }
     #endregion
 

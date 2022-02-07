@@ -12,10 +12,7 @@ public class RTSPlayer : NetworkBehaviour
     #region Private Variables
     [SerializeField] private List<Unit> myUnits = new List<Unit>();
 
-    public List<Unit> GetMyUnits()
-    {
-        return myUnits;
-    }
+    public List<Unit> GetMyUnits() => myUnits;
     #endregion
 
     #region My Functions
